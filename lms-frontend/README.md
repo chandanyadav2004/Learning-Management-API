@@ -1,16 +1,174 @@
-# React + Vite
+# Learning Management System (LMS) - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This is the **frontend application** for the Learning Management System built using:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* React.js
+* Vite
+* TailwindCSS
+* Axios
+* React Router
 
-## React Compiler
+The frontend interacts with the **Node.js backend API** to allow instructors to create courses and students to enroll in them.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React.js
+* Vite
+* Tailwind CSS
+* Axios
+* React Router DOM
+
+---
+
+# Project Structure
+
+```
+src
+│
+├── api
+│   └── api.js
+│
+├── components
+│   ├── Navbar.jsx
+│   └── CourseCard.jsx
+│
+├── context
+│   └── AuthContext.jsx
+│
+├── pages
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   ├── Dashboard.jsx
+│   ├── Courses.jsx
+│   ├── MyCourses.jsx
+│   └── CreateCourse.jsx
+│
+├── App.jsx
+├── main.jsx
+└── style.css
+```
+
+---
+
+# Installation
+
+### 1. Navigate to frontend folder
+
+```
+cd frontend
+```
+
+---
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+---
+
+### 3. Start the development server
+
+```
+npm run dev
+```
+
+The application will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+# Features
+
+## Authentication
+
+* User registration
+* User login
+* JWT token stored in localStorage
+
+---
+
+## Instructor Features
+
+* Create new course
+
+---
+
+## Student Features
+
+* Browse available courses
+* Enroll in courses
+* View enrolled courses
+
+---
+
+# Backend API Connection
+
+The frontend communicates with backend API:
+
+```
+http://localhost:5000/api
+```
+
+Axios automatically attaches JWT token for protected requests.
+
+---
+
+# Pages Overview
+
+### Register
+
+Allows new users to register as:
+
+* Student
+* Instructor
+
+### Login
+
+Authenticates users and stores JWT token.
+
+### Dashboard
+
+Displays navigation options based on user role.
+
+### Courses
+
+Displays all available courses.
+
+### My Courses
+
+Shows courses enrolled by the student.
+
+### Create Course
+
+Allows instructors to create new courses.
+
+---
+
+# Running the Application
+
+Start frontend:
+
+```
+npm run dev
+```
+
+Open browser:
+
+```
+http://localhost:5173
+```
+
+---
+
+# Author
+
+Chandan Yadav
