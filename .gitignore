@@ -1,0 +1,5 @@
+
+backend/node_modules
+lms-frontend/node_modules
+backend/.env
+lms-frontend/.env
